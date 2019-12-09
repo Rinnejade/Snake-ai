@@ -16,7 +16,7 @@ BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
- 
+
 segment_width = 15
 segment_height = 15
 segment_margin = 0
@@ -161,6 +161,7 @@ class Game:
             #     print("collision with body")
             #     self.on_cleanup()
 
+
     def onExecute(self):
         if self.on_init() == False:
             self._running = False
@@ -192,6 +193,7 @@ class Game:
             elif self.gameOverState:
                 self.gameOver()
                 continue
+
             else:
                 self.onLoop()
                 self.onRender()
@@ -235,6 +237,7 @@ class Game:
         self.renderText("GAME OVER")
         pygame.display.flip()
         self.clock.tick(speed)
+
 
 if __name__ == "__main__" :
 
